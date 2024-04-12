@@ -1,12 +1,13 @@
 <?php
 
-Route::middleware([
-//    'localeSessionRedirect',
-//    'localizationRedirect',
-//    'localeViewPath',
+Route::prefix(LaravelLocalization::setLocale())
+    ->middleware([
+    'localeSessionRedirect',
+    'localizationRedirect',
+    'localeViewPath',
     'auth',
     'role:admin|super_admin',
-])
+    ])
     ->group(function () {
 
         Route::name('admin.')->prefix('admin')->group(function () {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" dir="ltr">
+<html lang="{{ app()->getLocale() }}" dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 <head>
     <meta name="description" content="">
 
@@ -18,6 +18,7 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/font-awesome.min.css') }}">
 
+    {{-- Style for Arabic Language   --}}
     @if (app()->getLocale() == 'ar')
 
         {{--google font--}}
@@ -60,6 +61,7 @@
     {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>--}}
     {{--<script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>--}}
     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    {{--<script src=" {{ asset('admin_assets/js/dataTables.select.min.js') }}"></script>--}}   {{-- this is the local js file for the above cdn link --}}
 
     <link rel="stylesheet" href="{{ asset('admin_assets/css/custom.css')}}">
 
