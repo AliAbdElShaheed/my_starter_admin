@@ -21,7 +21,7 @@
 
                     <div class="col-md-12">
 
-                        @if (auth()->user()->hasPermission('read_roles'))
+                        @if (auth()->user()->hasPermission('create_roles'))
                             <a href="{{ route('admin.roles.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> @lang('site.create')</a>
                         @endif
 

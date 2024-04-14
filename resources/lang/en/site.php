@@ -23,12 +23,11 @@ return [
     'create' => 'Create',
     'read' => 'Read',
     'update' => 'Update',
-    'delete' => 'Delete',
     'created_at' => 'Created at',
     'all' => 'All',
     'close' => 'Close',
     'bulk_delete' => 'Bulk delete',
     'loading' => 'Loading ...',
     'show' => 'Show',
-    
+
 ];
