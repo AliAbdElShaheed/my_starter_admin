@@ -7,7 +7,9 @@
     </div>
 
     <ul class="breadcrumb mt-2">
-        <li class="breadcrumb-item">@lang('site.home')</li>
+        <li class="breadcrumb-item">{{ setting('description') }}</li>
+        <li class="breadcrumb-item">{{ setting('email') }}</li>
+        <li class="breadcrumb-item">{{ setting('keywords') }}</li>
     </ul>
 
 @endsection
