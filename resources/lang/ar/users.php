@@ -5,6 +5,7 @@ return [
     'user' => 'المستخدم',
     'name' => 'الاسم',
     'email' => 'البريد الإلكتروني',
+    'image' => 'الصورة',
     'password' => 'الرقم السري',
     'password_confirmation' => 'تأكيد الرقم السري',
     'profile' => 'الملف الشخصي',

@@ -25,19 +25,19 @@
 
                     {{--name--}}
                     <div class="form-group">
-                        <label>@lang('users.name')</label>
+                        <label>@lang('users.name') <span class="text-danger">*</span></label>
                         <input type="text" name="name" class="form-control" value="{{ old('name', auth()->user()->name) }}" required>
                     </div>
 
                     {{--email--}}
                     <div class="form-group">
-                        <label>@lang('users.email')</label>
+                        <label>@lang('users.email') <span class="text-danger">*</span></label>
                         <input type="email" name="email" class="form-control" value="{{ old('email', auth()->user()->email) }}" required>
                     </div>
 
                     {{--image--}}
                     <div class="form-group">
-                        <label>@lang('users.image') <span class="text-danger">*</span></label>
+                        <label>@lang('users.image') </label>
                         <input type="file" name="image" class="form-control load-image">
                         <img src="{{ auth()->user()->image_path }}" class="loaded-image" alt="" style="display: block; width: 200px; margin: 10px 0;">
                     </div>
