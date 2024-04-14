@@ -13,7 +13,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/main-teal.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/main-blue.css') }}" media="all">
 
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/font-awesome.min.css') }}">
