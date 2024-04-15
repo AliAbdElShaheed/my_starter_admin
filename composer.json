@@ -24,6 +24,7 @@
   },
   "require-dev": {
     "barryvdh/laravel-debugbar": "^3.5",
+    "beyondcode/laravel-query-detector": "^1.8",
     "facade/ignition": "^2.5",
     "fakerphp/faker": "^1.9.1",
     "knuckleswtf/scribe": "^2.3",
