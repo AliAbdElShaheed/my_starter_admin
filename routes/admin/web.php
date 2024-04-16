@@ -13,6 +13,7 @@ Route::prefix(LaravelLocalization::setLocale())
         Route::name('admin.')->prefix('admin')->group(function () {
 
             //home
+            Route::get('/', 'HomeController@index')->name('home');
             Route::get('/home', 'HomeController@index')->name('home');
 
             //role routes
