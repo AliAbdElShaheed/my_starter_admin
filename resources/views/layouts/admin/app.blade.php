@@ -13,7 +13,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/main-blue.css') }}" media="all">
+    <!-- Blue Theme (Initially Enabled) -->
+    <link id="blue-theme" rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/main-blue.css') }}"
+          media="all">
+    <!-- Teal Theme (Initially Disabled) -->
+    <link id="teal-theme" rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/main-teal.css') }}"
+          media="all" disabled>
 
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/font-awesome.min.css') }}">
@@ -52,8 +57,10 @@
     <script src="{{ asset('admin_assets/plugins/noty/noty.min.js') }}"></script>
 
     {{--datatable--}}
-    <script type="text/javascript" src="{{ asset('admin_assets/plugins/jquery.dataTables/jquery.dataTables.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('admin_assets/plugins/dataTables.bootstrap/dataTables.bootstrap.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('admin_assets/plugins/jquery.dataTables/jquery.dataTables.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('admin_assets/plugins/dataTables.bootstrap/dataTables.bootstrap.min.js') }}"></script>
 
     {{--<script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>--}}
     {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>--}}
@@ -187,6 +194,30 @@
         'width': '100%',
     });
 
+</script>
+
+<script>
+    document.getElementById('switch-theme').addEventListener('click', function () {
+        // Get the two stylesheets
+        var blueTheme = document.getElementById('blue-theme');
+        var tealTheme = document.getElementById('teal-theme');
+        var switchButton = document.getElementById('switch-theme'); // Button element
+
+        // Toggle the 'disabled' attribute and button color
+        if (blueTheme.disabled) {
+            blueTheme.removeAttribute('disabled');
+            tealTheme.setAttribute('disabled', true);
+
+            // Change button color to teal for the blue theme
+            switchButton.style.color = "#009688";
+        } else {
+            blueTheme.setAttribute('disabled', true);
+            tealTheme.removeAttribute('disabled');
+
+            // Change button color to blue for the teal theme
+            switchButton.style.color = "#22A7F0";
+        }
+    });
 </script>
 
 @stack('scripts')
